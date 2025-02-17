@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import './globals.css';
-import SessionProviderWrapper from '@/components/SessionProviderWrapper';
+import AppClientComponentWrapper from '@/_components/AppClientComponentWrapper';
 
 export const metadata: Metadata = {
   title: 'Resume Builder',
@@ -15,9 +15,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-
-          <SessionProviderWrapper>{children}</SessionProviderWrapper>
-
+        <AppClientComponentWrapper>{children}</AppClientComponentWrapper>
       </body>
     </html>
   );
