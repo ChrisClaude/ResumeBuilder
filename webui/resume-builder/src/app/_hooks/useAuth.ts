@@ -7,6 +7,7 @@ import {
 } from '@/config';
 import { signIn, signOut } from 'next-auth/react';
 import { useCallback } from 'react';
+import { logInfo } from '@/utils/logging.utils';
 
 export const useAuth = () => {
   const { data, status } = useSession();
