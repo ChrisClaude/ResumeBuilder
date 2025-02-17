@@ -1,24 +1,40 @@
 'use client';
 import { Button } from '@heroui/react';
 import { useAuth } from '@/_hooks/useAuth';
+import Link from 'next/link';
 
 const Header = () => {
   const { isUserSignedIn, login, logout } = useAuth();
 
   return (
-    <div className="flex justify-between items-center">
-      <h1 className="text-2xl font-bold">Resume Builder 123</h1>
-      {!isUserSignedIn && (
-        <Button color="primary" onPress={login}>
-          Login
-        </Button>
-      )}
-      {isUserSignedIn && (
-        <Button color="primary" onPress={logout}>
-          Logout
-        </Button>
-      )}
-    </div>
+    <header className="flex justify-between items-center p-4">
+      <nav>
+        <ul className='flex gap-6'>
+          <li>
+            <Link href="/">Templates</Link>
+          </li>
+          <li>
+            <Link href="/">About</Link>
+          </li>
+        </ul>
+      </nav>
+      <div className="text-2xl font-bold">
+        <Link href="/">AI Resume Builder</Link>
+      </div>
+
+      <div>
+        {!isUserSignedIn && (
+          <Button color="primary" onPress={login}>
+            Start Building
+          </Button>
+        )}
+        {isUserSignedIn && (
+          <Button color="primary" onPress={logout}>
+            Logout
+          </Button>
+        )}
+      </div>
+    </header>
   );
 };
 
