@@ -28,10 +28,10 @@ export default function Error({
           </p>
         </div>
         <div className="flex justify-center gap-4">
-          <Button 
-            color="primary" 
+          <Button
+            color="primary"
             size="lg"
-            onClick={() => reset()}>
+            onPress={() => reset()}>
             Try Again
           </Button>
         </div>
