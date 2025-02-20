@@ -3,13 +3,11 @@
 import React from 'react';
 import Link from 'next/link';
 import {
-  FaGithub,
-  FaTwitter,
   FaLinkedin,
   FaInstagram,
   FaFacebook,
-} from 'react-icons/fa';
-import { FaX, FaXTwitter } from 'react-icons/fa6';
+  FaXTwitter,
+} from 'react-icons/fa6';
 
 const Footer = () => {
   return (
@@ -75,13 +73,6 @@ const Footer = () => {
                   href="/privacy"
                   className="text-gray-400 hover:text-white transition">
                   Privacy Policy
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/terms"
-                  className="text-gray-400 hover:text-white transition">
-                  Cookie Preferences
                 </Link>
               </li>
             </ul>

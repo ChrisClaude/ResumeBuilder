@@ -28,3 +28,8 @@ export const NEXT_PUBLIC_TENANT_DOMAIN: string = getConfig(
   'NEXT_PUBLIC_TENANT_DOMAIN',
   process.env.NEXT_PUBLIC_TENANT_DOMAIN
 );
+
+export const COOKIE_BOT_DOMAIN_GROUP_ID: string = getConfig(
+  'COOKIE_BOT_DOMAIN_GROUP_ID',
+  process.env.COOKIE_BOT_DOMAIN_GROUP_ID
+);
