@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>AI Resume Builder</title>
+    <!-- Uncomment the following line to use the output.css file from the could storage account -->
+    <!-- <link
+      href="https://resumebuilderstorageacc.blob.core.windows.net/root/styles/output.css"
+      rel="stylesheet" /> -->
+      <!-- Uncomment the following line to use the output.css file in development -->
+      <link
+      href="./styles/output.css"
+      rel="stylesheet" />
+    <style id="common">
+      #GoogleExchange {
+        background-image: url(https://resumebuilderstorageacc.blob.core.windows.net/root/templates/src/idp_logos/colored/google.svg);
+      }
+      #GoogleExchange:hover {
+        background-image: url(https://resumebuilderstorageacc.blob.core.windows.net/root/templates/src/idp_logos/white/google.svg);
+      }
+      #LinkedInExchange {
+        background-image: url(https://resumebuilderstorageacc.blob.core.windows.net/root/templates/src/idp_logos/colored/linkedin.svg);
+      }
+      #LinkedInExchange:hover {
+        background-image: url(https://resumebuilderstorageacc.blob.core.windows.net/root/templates/src/idp_logos/white/linkedin.svg);
+      }
+      #MicrosoftAccountExchange {
+        background-image: url(https://resumebuilderstorageacc.blob.core.windows.net/root/templates/src/idp_logos/colored/microsoft.svg);
+      }
+      #MicrosoftAccountExchange:hover {
+        background-image: url(https://resumebuilderstorageacc.blob.core.windows.net/root/templates/src/idp_logos/white/microsoft.svg);
+      }
+    </style>
+    <style id="idpselector">
+      #SignInWithLogonNameExchange,
+      #SignUpWithLogonEmailExchange,
+      #SignUpWithLogonNameExchange {
+        background-image: url(https://resumebuilderstorageacc.blob.core.windows.net/root/templates/src/idp_logos/colored/local.svg);
+      }
+      #SignInWithLogonNameExchange:hover,
+      #SignUpWithLogonEmailExchange:hover,
+      #SignUpWithLogonNameExchange:hover {
+        background-image: url(https://resumebuilderstorageacc.blob.core.windows.net/root/templates/src/idp_logos/white/local.svg);
+      }
+      #SignUpWithLogonEmailExchange.text-link {
+        background-image: none;
+        background-color: transparent !important;
+      }
+      #SignUpWithLogonEmailExchange.text-link:hover {
+        background-image: none;
+        background-color: transparent !important;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="min-h-screen bg-gray-100 text-gray-900 flex justify-center">
+      <div
+        class="max-w-screen-xl m-0 sm:m-10 bg-white shadow sm:rounded-lg flex justify-center flex-1">
+        <div class="lg:w-1/2 xl:w-5/12 p-6 sm:p-12">
+          <div>
+            <img
+              src="https://storage.googleapis.com/devitary-image-host.appspot.com/15846435184459982716-LogoMakr_7POjrN.png"
+              class="w-32 mx-auto" />
+          </div>
+          <div class="mt-12 flex flex-col items-center">
+            <div class="w-full flex-1 mt-8">
+              <div id="api"></div>
+            </div>
+          </div>
+        </div>
+        <div class="flex-1 bg-indigo-100 text-center hidden lg:flex">
+          <div
+            class="m-12 xl:m-16 w-full bg-contain bg-center bg-no-repeat"
+            style="
+              background-image: url('https://resumebuilderstorageacc.blob.core.windows.net/root/undraw_designer_life_w96d.svg');
+            "></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

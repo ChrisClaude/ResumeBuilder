@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+.heading {
+  @apply flex justify-center items-center;
+}
+
+h1 {
+  @apply text-2xl xl:text-3xl font-extrabold;
+}
+
+.entry {
+  @apply flex flex-col gap-4;
+}
+
+.entry-item {
+  @apply flex flex-col gap-2;
+}
+
+.entry label {
+  @apply font-medium;
+}
+
+.entry-item input {
+  @apply w-full border border-gray-300 rounded-md p-2;
+}
+
+.entry-item input:focus {
+  @apply outline-none shadow outline-2 outline-[#667EEA];
+}
+
+.password-label {
+  @apply flex justify-between;
+}
+
+ a {
+  @apply cursor-pointer text-[#667EEA];
+ }
+
+ #next {
+  @apply cursor-pointer bg-[#667EEA] w-full text-white rounded-md p-2;
+ }
+
+ .divider {
+  @apply my-4;
+ }
+
+ #createAccount {
+  @apply ml-2;
+ }
