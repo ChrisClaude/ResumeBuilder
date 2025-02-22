@@ -5,7 +5,11 @@
 }
 
 h1 {
-  @apply text-2xl xl:text-3xl font-extrabold;
+  @apply text-xl md:text-2xl xl:text-3xl font-extrabold;
+}
+
+.intro {
+  @apply my-4 text-sm text-center;
 }
 
 .entry {
@@ -17,15 +21,23 @@ h1 {
 }
 
 .entry label {
-  @apply font-medium;
+  @apply font-normal;
 }
 
 .entry-item input {
-  @apply w-full border border-gray-300 rounded-md p-2;
+  @apply w-full border border-gray-300 rounded-md p-3 text-base;
 }
 
-.entry-item input:focus {
-  @apply outline-none shadow outline-2 outline-[#667EEA];
+input:focus {
+  @apply outline-solid shadow outline-1 outline-[#667EEA];
+}
+
+.entry-item input:hover {
+  border-color: #667EEA;
+}
+
+.error {
+  @apply text-red-500 text-sm;
 }
 
 .password-label {
@@ -37,13 +49,38 @@ h1 {
  }
 
  #next {
-  @apply cursor-pointer bg-[#667EEA] w-full text-white rounded-md p-2;
+  @apply cursor-pointer bg-[#667EEA] w-full text-white rounded-md p-2 transition-colors duration-200;
  }
 
+ #next:hover {
+  background-color: #5a67d8; /* Darker shade on hover */
+}
+
+#next:focus {
+  outline: 2px solid #667EEA;
+  outline-offset: 2px;
+}
+
+#next:disabled {
+  @apply bg-gray-300 cursor-not-allowed;
+}
+
  .divider {
-  @apply my-4;
+  @apply my-5 flex items-center justify-center;
+ }
+
+ .create p {
+  @apply text-center;
  }
 
  #createAccount {
   @apply ml-2;
+ }
+
+ .social {
+  @apply hidden;
+ }
+
+ .social + .divider {
+  @apply hidden;
  }

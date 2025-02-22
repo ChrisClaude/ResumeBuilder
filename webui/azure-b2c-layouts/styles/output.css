@@ -518,24 +518,6 @@
   }
 }
 @layer utilities {
-  .container {
-    width: 100%;
-    @media (width >= 40rem) {
-      max-width: 40rem;
-    }
-    @media (width >= 48rem) {
-      max-width: 48rem;
-    }
-    @media (width >= 64rem) {
-      max-width: 64rem;
-    }
-    @media (width >= 80rem) {
-      max-width: 80rem;
-    }
-    @media (width >= 96rem) {
-      max-width: 96rem;
-    }
-  }
   .m-0 {
     margin: calc(var(--spacing) * 0);
   }
@@ -764,10 +746,6 @@
     --tw-ease: var(--ease-in-out);
     transition-timing-function: var(--ease-in-out);
   }
-  .ease-out {
-    --tw-ease: var(--ease-out);
-    transition-timing-function: var(--ease-out);
-  }
   .hover\:bg-indigo-700 {
     &:hover {
       @media (hover: hover) {
@@ -853,14 +831,24 @@
   justify-content: center;
 }
 h1 {
-  font-size: var(--text-2xl);
-  line-height: var(--tw-leading, var(--text-2xl--line-height));
+  font-size: var(--text-xl);
+  line-height: var(--tw-leading, var(--text-xl--line-height));
   --tw-font-weight: var(--font-weight-extrabold);
   font-weight: var(--font-weight-extrabold);
+  @media (width >= 48rem) {
+    font-size: var(--text-2xl);
+    line-height: var(--tw-leading, var(--text-2xl--line-height));
+  }
   @media (width >= 80rem) {
     font-size: var(--text-3xl);
     line-height: var(--tw-leading, var(--text-3xl--line-height));
   }
+}
+.intro {
+  margin-block: calc(var(--spacing) * 4);
+  text-align: center;
+  font-size: var(--text-sm);
+  line-height: var(--tw-leading, var(--text-sm--line-height));
 }
 .entry {
   display: flex;
@@ -873,8 +861,8 @@ h1 {
   gap: calc(var(--spacing) * 2);
 }
 .entry label {
-  --tw-font-weight: var(--font-weight-medium);
-  font-weight: var(--font-weight-medium);
+  --tw-font-weight: var(--font-weight-normal);
+  font-weight: var(--font-weight-normal);
 }
 .entry-item input {
   width: 100%;
@@ -882,9 +870,11 @@ h1 {
   border-style: var(--tw-border-style);
   border-width: 1px;
   border-color: var(--color-gray-300);
-  padding: calc(var(--spacing) * 2);
+  padding: calc(var(--spacing) * 3);
+  font-size: var(--text-base);
+  line-height: var(--tw-leading, var(--text-base--line-height));
 }
-.entry-item input:focus {
+input:focus {
   --tw-shadow: 0 1px 3px 0 var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 1px 2px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
   box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
   outline-style: var(--tw-outline-style);
@@ -892,6 +882,21 @@ h1 {
   outline-color: #667EEA;
   --tw-outline-style: none;
   outline-style: none;
+}
+.entry-item input:hover {
+  border-color: #667EEA;
+}
+.entry-item input.error {
+  border-color: #e53e3e;
+  background-color: #fff5f5;
+}
+.entry-item input.error:focus {
+  outline: 2px solid #e53e3e;
+}
+.error {
+  font-size: var(--text-sm);
+  line-height: var(--tw-leading, var(--text-sm--line-height));
+  color: var(--color-red-500);
 }
 .password-label {
   display: flex;
@@ -908,12 +913,40 @@ a {
   background-color: #667EEA;
   padding: calc(var(--spacing) * 2);
   color: var(--color-white);
+  transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to;
+  transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+  transition-duration: var(--tw-duration, var(--default-transition-duration));
+  --tw-duration: 200ms;
+  transition-duration: 200ms;
+}
+#next:hover {
+  background-color: #5a67d8;
+}
+#next:focus {
+  outline: 2px solid #667EEA;
+  outline-offset: 2px;
+}
+#next:disabled {
+  cursor: not-allowed;
+  background-color: var(--color-gray-300);
 }
 .divider {
-  margin-block: calc(var(--spacing) * 4);
+  margin-block: calc(var(--spacing) * 5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.create p {
+  text-align: center;
 }
 #createAccount {
   margin-left: calc(var(--spacing) * 2);
+}
+.social {
+  display: none;
+}
+.social + .divider {
+  display: none;
 }
 @keyframes spin {
   to {
