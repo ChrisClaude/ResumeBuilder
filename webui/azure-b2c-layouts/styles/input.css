@@ -1,7 +1,7 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 .heading {
-  @apply flex justify-center items-center;
+  @apply flex justify-center items-center mb-6;
 }
 
 h1 {
@@ -33,7 +33,7 @@ input:focus {
 }
 
 .entry-item input:hover {
-  border-color: #667EEA;
+  border-color: #667eea;
 }
 
 .error {
@@ -44,20 +44,20 @@ input:focus {
   @apply flex justify-between;
 }
 
- a {
+a {
   @apply cursor-pointer text-[#667EEA];
- }
+}
 
- #next {
+#next {
   @apply cursor-pointer bg-[#667EEA] w-full text-white rounded-md p-2 transition-colors duration-200;
- }
+}
 
- #next:hover {
+#next:hover {
   background-color: #5a67d8; /* Darker shade on hover */
 }
 
 #next:focus {
-  outline: 2px solid #667EEA;
+  outline: 2px solid #667eea;
   outline-offset: 2px;
 }
 
@@ -65,22 +65,45 @@ input:focus {
   @apply bg-gray-300 cursor-not-allowed;
 }
 
- .divider {
+.divider {
   @apply my-5 flex items-center justify-center;
- }
+}
 
- .create p {
+.create p {
   @apply text-center;
- }
+}
 
- #createAccount {
+#createAccount {
   @apply ml-2;
- }
+}
 
- .social {
-  @apply hidden;
- }
+.accountButton {
+  @apply w-full max-w-xs font-bold shadow-sm rounded-lg py-3 bg-indigo-100 text-gray-800 flex items-center justify-center transition-all duration-300 ease-in-out focus:outline-none hover:shadow focus:shadow-sm cursor-pointer;
+}
 
- .social + .divider {
+.options {
+  @apply flex flex-col items-center gap-y-3;
+}
+
+.options div {
+  @apply w-full max-w-[350px];
+}
+
+.social .intro {
   @apply hidden;
- }
+}
+
+#localAccountForm .into {
+  @apply hidden;
+}
+
+.divider {
+  @apply gap-x-4 text-sm;
+}
+
+.divider::before,
+.divider::after {
+  content: '';
+  flex: 1;
+  @apply border-gray-100 border border-solid;
+}
