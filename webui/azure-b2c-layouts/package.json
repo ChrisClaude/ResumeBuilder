@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "build": "npx @tailwindcss/cli -i ./styles/input.css -o ./styles/output.css -w -m",
+    "build:signin-styles": "npx @tailwindcss/cli -i ./styles/input.css -o ./styles/output.css -w -m",
     "build:signup-styles": "npx @tailwindcss/cli -i ./styles/signup-input.css -o ./styles/signup-output.css -w -m",
     "build:reset-styles": "npx @tailwindcss/cli -i ./styles/reset-password-input.css -o ./styles/reset-password-output.css -w -m"
   },
