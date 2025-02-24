@@ -1,0 +1,38 @@
+@import 'tailwindcss';
+
+h1 {
+  @apply text-xl md:text-2xl xl:text-3xl font-extrabold;
+}
+
+.textInput {
+  @apply w-full border border-gray-300 rounded-md p-3 text-base;
+}
+
+.textInput:focus {
+  @apply outline-solid shadow outline-1 outline-[#667EEA];
+}
+
+.textInput:hover {
+  border-color: #667eea;
+}
+
+.sendCode {
+  @apply cursor-pointer bg-[#667EEA] w-full text-white rounded-md p-2 transition-colors duration-200;
+}
+
+.sendCode:hover {
+  background-color: #5a67d8; /* Darker shade on hover */
+}
+
+.sendCode:focus {
+  outline: 2px solid #667eea;
+  outline-offset: 2px;
+}
+
+.sendCode:disabled {
+  @apply bg-gray-300 cursor-not-allowed;
+}
+
+.attr {
+  @apply flex flex-col gap-y-2;
+}
