@@ -1,38 +1,65 @@
 @import 'tailwindcss';
 
 h1 {
-  @apply text-xl md:text-2xl xl:text-3xl font-extrabold;
+  @apply text-xl md:text-2xl xl:text-3xl font-extrabold text-center;
+}
+
+label {
+  @apply mb-3 font-normal;
+}
+
+.intro p {
+  @apply text-gray-600 text-center mb-4;
 }
 
 .textInput {
-  @apply w-full border border-gray-300 rounded-md p-3 text-base;
-}
-
-.textInput:focus {
-  @apply outline-solid shadow outline-1 outline-[#667EEA];
+  @apply w-full border border-gray-300 rounded-md p-3 text-base focus:outline-none focus:ring-2 focus:ring-indigo-400;
 }
 
 .textInput:hover {
-  border-color: #667eea;
+  @apply border-indigo-400;
 }
 
-.sendCode {
-  @apply cursor-pointer bg-[#667EEA] w-full text-white rounded-md p-2 transition-colors duration-200;
+button {
+  @apply w-full py-2 px-4 rounded-md font-semibold transition duration-200 cursor-pointer;
 }
 
-.sendCode:hover {
-  background-color: #5a67d8; /* Darker shade on hover */
+.sendCode,
+.verifyCode,
+.sendNewCode,
+.changeClaims,
+#continue {
+  @apply bg-indigo-400 text-white hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-300 disabled:bg-gray-300 disabled:cursor-not-allowed;
 }
 
-.sendCode:focus {
-  outline: 2px solid #667eea;
-  outline-offset: 2px;
-}
-
-.sendCode:disabled {
-  @apply bg-gray-300 cursor-not-allowed;
+#cancel {
+  @apply bg-gray-400 text-white hover:bg-gray-500 focus:ring-gray-500;
 }
 
 .attr {
-  @apply flex flex-col gap-y-2;
+  @apply flex flex-col gap-4;
+}
+
+.error {
+  @apply text-red-500 text-sm;
+}
+
+.buttons {
+  @apply flex flex-col gap-2 mt-4;
+}
+
+.verifying-modal {
+  @apply hidden fixed inset-0 bg-black/50 items-center justify-center;
+}
+
+.helpLink.tiny {
+  @apply hidden;
+}
+
+.attr ul {
+  @apply flex flex-col gap-y-3;
+}
+
+.VerificationControl {
+  @apply mb-4;
 }

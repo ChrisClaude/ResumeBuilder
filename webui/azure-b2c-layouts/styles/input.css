@@ -29,7 +29,7 @@ h1 {
 }
 
 input:focus {
-  @apply outline-solid shadow outline-1 outline-[#667EEA];
+  @apply outline-solid shadow outline-1 outline-indigo-400;
 }
 
 .entry-item input:hover {
@@ -45,19 +45,19 @@ input:focus {
 }
 
 a {
-  @apply cursor-pointer text-[#667EEA];
+  @apply cursor-pointer text-indigo-400;
 }
 
 #next {
-  @apply cursor-pointer bg-[#667EEA] w-full text-white rounded-md p-2 transition-colors duration-200;
+  @apply cursor-pointer bg-indigo-400 w-full text-white rounded-md p-2 transition-colors duration-200;
 }
 
 #next:hover {
-  background-color: #5a67d8; /* Darker shade on hover */
+  @apply bg-indigo-500;
 }
 
 #next:focus {
-  outline: 2px solid #667eea;
+  @apply outline-solid shadow outline-1 outline-indigo-400;
   outline-offset: 2px;
 }
 
