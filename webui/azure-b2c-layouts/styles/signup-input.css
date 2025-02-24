@@ -4,8 +4,8 @@ h1 {
   @apply text-xl md:text-2xl xl:text-3xl font-extrabold text-center;
 }
 
-label {
-  @apply mb-3 font-normal;
+.attrEntry {
+  @apply flex flex-col gap-2;
 }
 
 .intro p {
