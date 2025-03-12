@@ -32,6 +32,7 @@ public static class DependencyInjection
         return app;
     }
 
+    // TODO: Need to review the below code
     private static ILogger ConfigureLogging(IServiceCollection services)
     {
         services.AddLogging((loggingBuilder) =>
