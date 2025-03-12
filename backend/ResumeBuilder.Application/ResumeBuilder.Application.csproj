@@ -6,9 +6,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Common/Dtos/" />
     <Folder Include="Interfaces/" />
     <Folder Include="Interfaces/Repositories/" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="14.0.0" />
   </ItemGroup>
 
 </Project>
