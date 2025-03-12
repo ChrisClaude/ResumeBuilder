@@ -8,5 +8,6 @@ public class User
     public string Name { get; set; }
     public string Surname { get; set; }
     public string Email { get; set; }
+    public List<UserRole> UserRoles { get; set; }
     public IEnumerable<Template> Templates { get; set; }
 }

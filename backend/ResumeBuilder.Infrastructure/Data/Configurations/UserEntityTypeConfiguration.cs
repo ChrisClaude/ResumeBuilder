@@ -15,5 +15,6 @@ public class UserEntityTypeConfiguration : IEntityTypeConfiguration<User>
         builder.Property(x => x.Name).IsRequired();
         builder.Property(x => x.Surname).IsRequired();
         builder.Property(x => x.Email).IsRequired();
+        builder.Property(x => x.UserRoles).IsRequired();
     }
 }
