@@ -13,6 +13,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ResumeBuilder.Application\ResumeBuilder.Application.csproj" />
+    <ProjectReference Include="..\ResumeBuilder.Infrastructure\ResumeBuilder.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>
