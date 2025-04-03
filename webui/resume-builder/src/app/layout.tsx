@@ -14,6 +14,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+// https://montclaire-fluid-demo.squarespace.com/
   return (
     <html lang="en" suppressContentEditableWarning={true}>
       <Script
