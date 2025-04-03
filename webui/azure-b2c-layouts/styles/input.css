@@ -86,7 +86,7 @@ a {
 }
 
 .options div {
-  @apply w-full max-w-[350px];
+  @apply w-full max-w-[350px] flex justify-center;
 }
 
 .social .intro {
